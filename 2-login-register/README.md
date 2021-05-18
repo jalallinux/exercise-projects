@@ -1,4 +1,9 @@
-# login-register
+# Todo List
+
+
+## Tutorial
+[![To Do List with NuxtJs, Vuex, Vuetify UI framework](http://img.youtube.com/vi/FaOy5UQc0tQ/0.jpg)](http://www.youtube.com/watch?v=FaOy5UQc0tQ "To Do List with NuxtJs, Vuex, Vuetify UI framework")
+
 
 ## Build Setup
 
@@ -17,4 +22,6 @@ $ npm run start
 $ npm run generate
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+## Screenshot
+
+![screenshot-1](screenshots/1400-02-28-1.png)

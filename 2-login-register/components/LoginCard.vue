@@ -54,8 +54,8 @@ export default {
       valid: true,
       showPassword: false,
       form: {
-        email: 'smjjalalzadeh93@gmail.com',
-        password: '123456',
+        email: null,
+        password: null,
       },
       rules: {
         email: [
@@ -82,15 +82,6 @@ export default {
             this.loading = false
           })
       }
-    },
-    forgotPassword() {
-      // this.$fire.auth.sendPasswordResetEmail(this.auth.email)
-      //   .then((data) => {
-      //     console.log('forgotPassword-success', data)
-      //   })
-      //   .catch(function (error) {
-      //     console.log('forgotPassword-error', error)
-      //   })
     },
     goRegister() {
       this.$emit('go-to', 1)
