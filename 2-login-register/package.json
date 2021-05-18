@@ -2,6 +2,10 @@
   "name": "login-register",
   "version": "1.0.0",
   "private": true,
+  "author": {
+    "name": "JalalLinuX",
+    "url": "jalallinux.ir"
+  },
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
@@ -9,8 +13,13 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@nuxtjs/axios": "^5.13.4",
+    "@nuxtjs/firebase": "^7.5.0",
+    "bcryptjs": "^2.4.3",
     "core-js": "^3.6.5",
-    "nuxt": "^2.14.6"
+    "firebase": "^8.6.1",
+    "nuxt": "^2.14.6",
+    "write-json-file": "^2.3.0"
   },
   "devDependencies": {
     "@nuxtjs/vuetify": "^1.11.2"
