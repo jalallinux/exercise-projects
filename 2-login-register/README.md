@@ -24,4 +24,8 @@ $ npm run generate
 
 ## Screenshot
 
+![screenshot-1](screenshots/1400-02-28-2.png)
+
+![screenshot-1](screenshots/1400-02-28-3.png)
+
 ![screenshot-1](screenshots/1400-02-28-1.png)
