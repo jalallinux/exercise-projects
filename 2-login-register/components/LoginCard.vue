@@ -9,6 +9,7 @@
       <v-form ref="form" v-model="valid" lazy-validation autocomplete="off">
         <v-text-field
           outlined
+          :disabled="loading"
           :rules="rules.email"
           v-model="form.email"
           append-icon="mdi-email"
@@ -18,12 +19,14 @@
 
         <v-text-field
           outlined
+          :disabled="loading"
           @click:append="showPassword = !showPassword"
           :type="showPassword ? 'text' : 'password'"
           :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
           v-model="form.password"
           :rules="rules.password"
           label="Password"
+          @keydown.enter="login"
           required
         />
 

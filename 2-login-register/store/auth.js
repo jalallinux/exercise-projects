@@ -6,8 +6,7 @@ export const state = () => ({
 
 export const actions = {
   async login(state, {email, password}) {
-    const uid = (await this.$fire.auth.signInWithEmailAndPassword(email, password))
-    console.log(uid)
+    const uid = (await this.$fire.auth.signInWithEmailAndPassword(email, password)).user.uid
     const user = (await this.$fire.database.ref(`/users/${uid}`).get()).val()
     state.commit('setUser', user)
     return user
@@ -20,6 +19,9 @@ export const actions = {
       password: bcrypt.hashSync(password)
     })
   },
+  logout(state) {
+    state.commit('setUser', null)
+  }
 }
 
 export const mutations = {

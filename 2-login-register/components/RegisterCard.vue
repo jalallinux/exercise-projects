@@ -11,6 +11,7 @@
           <v-col cols="6">
             <v-text-field
               outlined
+              :disabled="loading"
               :rules="rules.name"
               v-model="form.name"
               append-icon="mdi-account"
@@ -21,6 +22,7 @@
           <v-col cols="6">
             <v-text-field
               outlined
+              :disabled="loading"
               :rules="rules.family"
               v-model="form.family"
               append-icon="mdi-account"
@@ -32,6 +34,7 @@
 
         <v-text-field
           outlined
+          :disabled="loading"
           :rules="rules.mobile"
           v-model="form.mobile"
           prefix="+98"
@@ -43,6 +46,7 @@
 
         <v-text-field
           outlined
+          :disabled="loading"
           :rules="rules.email"
           v-model="form.email"
           append-icon="mdi-email"
@@ -55,6 +59,7 @@
           <v-col cols="6">
             <v-text-field
               outlined
+              :disabled="loading"
               @click:append="showPassword = !showPassword"
               :type="showPassword ? 'text' : 'password'"
               :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
@@ -68,12 +73,14 @@
           <v-col cols="6">
             <v-text-field
               outlined
+              :disabled="loading"
               @click:append="showPassword = !showPassword"
               :type="showPassword ? 'text' : 'password'"
               v-model="form.password_confirmation"
               :rules="rules.password_confirmation"
               label="Password Confirmation"
               :append-icon="showPassword ? 'mdi-lock-open-variant' : 'mdi-lock'"
+              @keydown.enter="register"
               required
             />
           </v-col>

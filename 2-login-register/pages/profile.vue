@@ -54,6 +54,7 @@ import bcrypt from 'bcryptjs'
 
 export default {
   name: "profile",
+  middleware: ['auth'],
 
   data() {
     return {
