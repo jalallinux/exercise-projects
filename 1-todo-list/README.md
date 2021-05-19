@@ -1,5 +1,7 @@
 # Todo List
+It's only a very small and simple project only for practicing and teaching.
 
+It is not suitable for publishing
 
 ## Tutorial
 [![To Do List with NuxtJs, Vuex, Vuetify UI framework](http://img.youtube.com/vi/FaOy5UQc0tQ/0.jpg)](http://www.youtube.com/watch?v=FaOy5UQc0tQ "To Do List with NuxtJs, Vuex, Vuetify UI framework")

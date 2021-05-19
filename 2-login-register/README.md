@@ -1,4 +1,8 @@
 # Login Register System
+It's only a very small and simple project only for practicing and teaching.
+
+It is not suitable for publishing
+
 
 ## Build Setup
 
