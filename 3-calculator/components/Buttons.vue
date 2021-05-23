@@ -268,7 +268,6 @@ export default {
     atClick(button) {
       switch (button.type) {
         case 'input':
-          return this.$emit('pressed', button)
         case 'operator':
           return this.$emit('pressed', button)
         default:

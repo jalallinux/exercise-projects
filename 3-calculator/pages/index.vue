@@ -1,7 +1,7 @@
 <template>
   <v-row justify="center" align="center">
     <v-col cols="12" sm="8" md="6">
-      <v-card max-width="475" class="mx-auto">
+      <v-card max-width="550" class="mx-auto">
         <v-toolbar dark color="teal">
           <v-app-bar-nav-icon>
             <v-icon>mdi-calculator</v-icon>
@@ -12,9 +12,11 @@
           <v-text-field
             class="calculator-display"
             clearable
+            @click:prepend-inner="readonly = !readonly"
+            :readonly="readonly"
             v-model="display"
+            :prepend-inner-icon="readonly ? 'mdi-keyboard-off-outline' : 'mdi-keyboard-outline'"
             hide-details
-            readonly
             outlined
           />
           <v-card-text style="height: 64px" class="text-center text-h6" v-text="result" />
@@ -33,6 +35,7 @@ export default {
   components: {Buttons},
   data() {
     return {
+      readonly: true,
       operators: ['+', '-', '×', '÷'],
       display: '',
       result: '',
