@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import { evaluate } from 'mathjs'
 
-const Validation = {
+const MathMethod = {
   install(Vue, options) {
     Vue.mixin({
       methods: {
@@ -18,4 +18,4 @@ const Validation = {
   }
 }
 
-Vue.use(Validation)
+Vue.use(MathMethod)
