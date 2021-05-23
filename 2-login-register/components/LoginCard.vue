@@ -57,8 +57,8 @@ export default {
       valid: true,
       showPassword: false,
       form: {
-        email: null,
-        password: null,
+        email: 'smjjalalzadeh93@gmail.com',
+        password: '123456',
       },
       rules: {
         email: [
@@ -77,8 +77,14 @@ export default {
     login() {
       if (this.$refs.form.validate()) {
         this.loading = true
-        this.$store.dispatch('auth/login', this.form)
-          .then((user) => {
+        // this.$store.dispatch('auth/login', this.form)
+        this.$fire.auth.signInWithEmailAndPassword(this.form.email, this.form.password)
+          .then(({user}) => {
+            this.$fire.database.ref(`/users/${user.uid}`).get()
+              .then((data) => {
+                data.val()
+              })
+            console.log(meta)
             this.$router.push('/profile')
           })
           .finally(() => {
